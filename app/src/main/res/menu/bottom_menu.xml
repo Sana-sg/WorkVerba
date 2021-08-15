@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/secondFragment"
+        android:title="Notes"
+        android:icon="@drawable/ic_note_add" />
+    <item
+        android:id="@+id/thirdFragment"
+        android:title="Timer"
+        android:icon="@drawable/ic_baseline_timer_24" />
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:title="Add"
+        android:icon="@drawable/ic_create" />
+
+
+
+</menu>

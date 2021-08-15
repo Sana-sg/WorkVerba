@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/fab_transformation_scrim_behavior"
+    tools:context=".SecondFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:menu="@menu/options_menu"
+            app:title="My Notes"
+            app:titleTextColor="#FF6374"
+            android:paddingTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/white"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/anim1"
+            android:id="@+id/anim1"
+            android:visibility="invisible"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add notes"
+            android:layout_marginTop="60dp"
+            android:textColor="#494747"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:id="@+id/add_note"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh to load notes"
+           android:layout_marginTop="200dp"
+            android:textColor="#BDB7B7"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:id="@+id/no_rcv"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe to delete notes"
+            android:layout_marginTop="250dp"
+            android:textColor="#BDB7B7"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:id="@+id/swipe"
+            ></TextView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="#FF6374"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_baseline_add_24"
+            app:rippleColor="@color/black"
+            app:borderWidth="0dp"
+            app:tint="@color/white" />
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/refrsh"
+            android:layout_marginTop="60dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

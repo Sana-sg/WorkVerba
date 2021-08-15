@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FourthFragment"
+    >
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/addbck">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Add Class / Task"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textFontWeight="800"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="220dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/spinnerbox"
+            android:background="@drawable/textbox"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spin"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:entries="@array/day_array"
+                android:prompt="@string/day_prompt"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/start_time1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start time"
+            app:startIconDrawable="@drawable/ic_access_time"
+            android:textSize="20dp"
+            app:startIconTint="#FF6374"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_below="@id/spinnerbox"
+            app:hintTextColor="#EB3349"
+            app:boxStrokeColor="#EB3349"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="3dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:id="@+id/start_time"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/end_time1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:startIconDrawable="@drawable/ic_baseline_timer_off_24"
+            android:hint="End time"
+            android:textSize="20dp"
+            android:inputType="text"
+            app:hintTextColor="#EB3349"
+            app:boxStrokeColor="#EB3349"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:padding="10dp"
+            app:startIconTint="#FF6374"
+            android:layout_below="@+id/start_time1"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:id="@+id/end_time"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subject1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Task/Subject"
+        app:startIconDrawable="@drawable/ic_event_note"
+        android:textSize="20dp"
+        app:startIconTint="#FF6374"
+        android:inputType="text"
+        android:padding="10dp"
+        app:hintTextColor="#EB3349"
+        app:boxStrokeColor="#EB3349"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@+id/end_time1"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/room1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="Room no / link"
+            app:startIconDrawable="@drawable/ic_baseline_room_24"
+            android:textSize="20dp"
+            app:startIconTint="#FF6374"
+            android:inputType="text"
+            android:padding="10dp"
+            app:hintTextColor="#EB3349"
+            app:boxStrokeColor="#EB3349"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/subject1"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/room"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="ADD"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@id/room1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/add"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/buttonstyle"
+            android:textColor="@color/white"
+            ></androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>
+        </RelativeLayout>
+<!--</ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

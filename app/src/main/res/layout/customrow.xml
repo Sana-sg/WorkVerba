@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    android:layout_margin="20dp"
+    android:layout_marginBottom="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/timing">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/txt1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="start time"
+            android:textSize="12sp"
+            app:chipBackgroundColor="#FFAA5B"
+            app:chipIcon="@drawable/ic_baseline_timer_24"
+            app:chipIconSize="25dp"
+            app:chipIconTint="@color/black" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/txt2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"
+            android:fontFamily="@font/montserrat"
+            android:text="end time"
+            android:textSize="12sp"
+            app:chipBackgroundColor="#C897FA"
+            app:chipIcon="@drawable/ic_baseline_timer_off_24"
+            app:chipIconSize="25dp"
+            app:chipIconTint="@color/black" />
+    </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="70dp"
+            android:background="#5F5F5F"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="130dp"
+            android:id="@+id/line"
+            ></View>
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Subject"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt3"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Room"
+            android:textColor="@color/black"
+            android:textSize="18dp"></TextView>
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
